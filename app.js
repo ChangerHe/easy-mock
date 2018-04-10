@@ -33,7 +33,7 @@ app
   .use(serve('/upload', path.resolve(__dirname, 'config', uploadConf.dir)))
   .use(logger)
   .use(middleware.util)
-  .use(cors({ credentials: true, maxAge: 2592000 }))
+  .use(cors({ origin: '*', credentials: true, maxAge: 2592000 }))
   .use(koaJwt({ secret: jwtSecret }).unless((ctx) => {
     if (/^\/api/.test(ctx.path)) {
       return pathToRegexp([
