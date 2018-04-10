@@ -258,7 +258,7 @@ export default {
             title: this.$t('confirm.title'),
             content: this.$t('p.login.confirm.register.content'),
             onOk: () => {
-              this.register()
+              // this.register()
             }
           })
         }
